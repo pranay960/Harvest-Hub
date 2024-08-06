@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvest Hub-Register</title>
+    <style>
+        /* Your CSS rules can go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: green;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* ... (existing CSS styles) ... */
+
+        .register {
+            width: 500px;
+            height:600px;
+            margin:auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+        .register h2 {
+            text-align: center;
+        }
+
+        .register-form {
+            margin-top: 20px;
+        }
+
+       .register-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .register-form input {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .register-form button {
+            background-color: green;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body background="img/agriculture.jpg">
+    <header>
+        <h1>Welcome to Our Harvest Hub</h1>
+    </header>
+    </br>
+    </br>
+  <center>
+    <div class="register 2">
+        <h2><center>REGISTRATION FOR CUSTOMERS</center></h2>
+        <form class="register-form" action="login.html" method="post" onsubmit="return validateForm1()">
+<label for="fname">Name:</label>
+            <input type="text" id="fname1" name="first" required><br>
+<label for="phno">Phone Number:</label>
+            <input type="number" id="phno1" name="phno" required><br>
+<label for="email">E-mail ID:</label>
+            <input type="email" id="email1" name="email" required> <br>         
+<label for="username">Username:</label>
+            <input type="text" id="username1" name="username" required><br>
+            <label for="password1">Create Password:</label>
+            <input type="password" id="password11" name="password1" required><br>
+            <label for="password2">Confirm Password:</label>
+            <input type="password" id="password21" name="password2" required><br>
+<center><button>REGISTER</button></br></br>
+            </center>
+        </form>
+    </div>
+<script>
+    function validateForm1() {
+      const first = document.getElementById('fname1').value;
+      const phno = document.getElementById('phno1').value;      
+      const username = document.getElementById('username1').value;
+      const email = document.getElementById('email1').value;
+      const password1 = document.getElementById('password11').value;
+      const password2 = document.getElementById('password21').value;
+
+      // Simple validation for required fields
+      if (username === '' || email === '' || password1 === '' || password2 === '') {
+        alert('Please fill in all fields');
+        return false;
+      }
+
+      // Validate password match
+      if (password1 !== password2) {
+        alert('Passwords do not match');
+        return false;
+      }
+
+      window.location.href = 'login.html';
+      return true;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvest Hub - Login</title>
+    <style>
+        /* Your CSS rules can go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: green;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* ... (existing CSS styles) ... */
+
+        .login-container {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+        }
+
+        .login-form {
+            margin-top: 20px;
+        }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            background-color: green;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body background="img/agriculture.jpg">
+    <header>
+        <h1>Welcome to Harvest Hub</h1>
+    </header>
+    </br>
+    </br>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form class="login-form" method="post" action="home.html" onsubmit="return validateForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <center><button type="submit">LOGIN</button></br></br>
+            OR
+            <p>Don't have an account?<a href="register1.html">Create one</a></p>
+            </center>
+        </form>
+    </div>
+</body>
+<script>
+    function validateForm() {     
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Simple validation for required fields
+      if (username === '' || password === '') {
+        alert('Please fill in all fields');
+        return false;
+      }
+
+      window.location.href = 'home.html';
+      return true;
+    }
+  </script>
+</html>
